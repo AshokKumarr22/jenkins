@@ -1,0 +1,38 @@
+what is jenkins?ci/cd concepts
+Jenkins is a open source automation server written in java language used for continous integration/continous deployment
+
+why jenkins
+It helps for the process of building,testing and deployment of software
+key-features:
+----------
+free and opensource,lots of plugins,supports pipelines
+
+what are ci/cd
+ci-continous integration 
+->It is the process of building and testing 
+cd-continous delivery/deployment
+->After the completion of ci process ,we had some war/jar files
+->jenkins automatically deploy that files into server is known as deployment process
+->if we have a manager approval for deploying stage,jenkins not deploy it
+->we will deploy it after the approval acceptance means contimous delivery
+
+
+Install  jenkins(linux/windows or docker)
+Go to aws console and create a server named as jenkins..allow port 8080 security group..connect to server..open jenkins io website
+and select ubuntu flavour,copy the links and enter into server ,finally entered"install jenkins" after installation..
+we install java openjdk21 and entered systemctl start jenkins ,systemctl status jenkins and also we know the java --version
+now go to aws and copy the public ip and entered in chrome,we get the link,now copy the link and use cat command before link
+we get a password,entered the password in that link ,now jenkins opened and installed suggested plugins,now we can see jenkins ui dashboard
+
+what are jobs/projects and builds
+->Jobs and projects are same,it is the tasks for running the process of building,testing,deployment 
+->Builds are actual execution of job
+->we have some types in jobs/project:
+  1.freestyle project
+  2.pipeline project
+  3.Multibranch pipeline project
+
+what is scm
+scm-source code management,connect jenkins to git in manage jenkins and give the repo url and credentials to jenkins,it clones the code from scm 
+
+
