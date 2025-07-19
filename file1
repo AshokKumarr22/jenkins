@@ -1,0 +1,66 @@
+what are jobs and explain types of jobs
+Jobs are tasks that jenkins performs ,such as building,testing and deploying 
+->we have different types of jobs available,but we use mainly 3:
+     1.Freestyle job
+     2.Pipeline
+     3.Multibranch pipeline
+1.Freestyle job:
+   ---------
+->In freestyle job,we can write a basic code and build it by selecting options
+->It is simple and easy method for beginners
+->But for organisations,we can't use this method
+2.Pipeline:
+   -----
+->pipeline is the important jobs in jenkins
+->It is the scripted way to define ci/cd process in jenins
+->we write ci/cd process in groovy language
+->we write the code in a file named as " jenkinsfile " and saved it in github repo
+->jenkins configure it from repo and run the jobs by using pipeline steps in jenkinsfile
+#structure:     
+   -----
+->we have many stages and steps 
+   pipeline{
+      agent any
+      stages{
+        stage("build"){
+	  steps{
+	     echo "mvn clean install"
+	  }
+	}
+      }
+   }
+->we can write pipeline in 2 ways
+  1.Declarative pipeline: It is easier and understandable way
+  2.Scripted pipeline: It is flexible but complex
+3.Multibranch pipeline:
+   ----------------
+->It is similar to pipeline but here we build all the branches
+->we can write same pipeline jenkinsfile and save it in all branches
+->or we change the pipeline steps in another branch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
