@@ -1,0 +1,20 @@
+Explain the diff b/w github webhook trigger ,trigger periodically and poll scm
+Webhook trigger:
+------------
+->it uses push mechanism
+->By using webhook scm sends the notification to jenkins, when event happened in github
+->jenkins automatically build the job 
+->it used for real time jobs
+Trigger periodically:
+----------------
+->it used for schedlued purposes
+->jenkins uses a cron schedule to trigger the jobs at fixed time
+->we use it for night schedules,backups,system checkups and for deployement purposes
+poll scm:
+------
+->it uses pull mechanism
+->when we schedlued cronjob for 5mins like Trigger periodically
+->jenkins checks the scm for every 5 mins compare to last commit
+->if the changes had done ,automatically it triggers thr build
+->it there is nothing changes,jenkins not trigger
+->we cann't use it for real time ,it can be used when webhook trigger cann't used 
